@@ -22,6 +22,32 @@ export default defineType({
       type: 'boolean',
       initialValue: false,
     }),
+    defineField({
+      name: 'orderOfAppearance',
+      title: 'Order of appearance',
+      description: "Controls in what order will it'll appear in the list on the frontend",
+      type: 'number',
+      hidden: ({document}) => !document?.isFeatured,
+      validation: (Rule) => Rule.min(1) && Rule.integer() && Rule.positive(),
+    }),
   ],
-  preview: {select: {title: 'organization.name', media: 'organization.logo'}},
+  preview: {
+    select: {title: 'organization.name', media: 'organization.logo', subtitle: 'orderOfAppearance'},
+    prepare(selection) {
+      const {title, subtitle, media} = selection
+
+      return {
+        title,
+        media,
+        subtitle: subtitle ? `Order of appearance: #${subtitle}` : '',
+      }
+    },
+  },
+  orderings: [
+    {
+      title: 'Order of Appearance',
+      name: 'orderOfAppearanceAsc',
+      by: [{field: 'orderOfAppearance', direction: 'asc'}],
+    },
+  ],
 })
