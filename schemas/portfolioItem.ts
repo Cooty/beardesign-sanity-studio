@@ -65,14 +65,12 @@ export default defineType({
     defineField({
       name: 'technologies',
       title: 'Technologies used',
-      description: 'Tags associated with a Technology will be automatically added to the frontend',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'technology'}]}],
     }),
     defineField({
       name: 'tags',
       title: 'Tags',
-      description: 'Only add Tags that are not related to an associated Technology',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'tag'}]}],
     }),

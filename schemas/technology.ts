@@ -29,13 +29,6 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'tags',
-      title: 'Related tags',
-      description: 'One or more Tag that corresponds to this technology',
-      type: 'array',
-      of: [{type: 'reference', to: [{type: 'tag'}]}],
-    }),
-    defineField({
       name: 'isFeatured',
       title: 'Featured',
       description:
