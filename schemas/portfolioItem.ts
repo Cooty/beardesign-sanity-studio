@@ -37,8 +37,8 @@ export default defineType({
       to: [{type: 'organization'}],
     }),
     defineField({
-      name: 'myRichTextExample',
-      title: 'Rich text example',
+      name: 'description',
+      title: 'Description',
       type: 'blockContent',
     }),
     defineField({
@@ -83,7 +83,7 @@ export default defineType({
       const {title, subtitle} = selection
       return {
         title,
-        subtitle: `Order of appearance: #${subtitle}`,
+        subtitle: subtitle ? `Order of appearance: #${subtitle}` : '',
       }
     },
   },
