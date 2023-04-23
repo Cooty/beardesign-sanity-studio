@@ -37,8 +37,8 @@ export default defineType({
       to: [{type: 'organization'}],
     }),
     defineField({
-      name: 'myRichTextExample',
-      title: 'Rich text example',
+      name: 'description',
+      title: 'Description',
       type: 'blockContent',
     }),
     defineField({
