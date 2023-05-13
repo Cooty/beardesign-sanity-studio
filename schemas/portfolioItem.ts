@@ -37,6 +37,13 @@ export default defineType({
       to: [{type: 'organization'}],
     }),
     defineField({
+      name: 'metaDescription',
+      title: 'Meta description',
+      type: 'text',
+      description: 'Short summary of the content',
+      validation: (Rule) => Rule.max(180),
+    }),
+    defineField({
       name: 'description',
       title: 'Description',
       type: 'blockContent',
