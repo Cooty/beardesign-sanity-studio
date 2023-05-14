@@ -23,7 +23,7 @@ const EmbedPreview: FunctionComponent<PreviewProps<PreviewLayoutKey>> = (props) 
   return (
     <>
       {renderDefault({...props, title: 'Embedded Content'})}
-      <AspectRatio title="Fooo">
+      <AspectRatio>
         <ResponsiveIframe src={embedUrl} frameBorder="0" allowFullScreen title="Embedded content" />
       </AspectRatio>
     </>
