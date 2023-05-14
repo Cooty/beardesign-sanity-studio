@@ -70,5 +70,8 @@ export default defineType({
         storeOriginalFilename: false,
       },
     }),
+    defineArrayMember({
+      type: 'embed',
+    }),
   ],
 })
