@@ -7,6 +7,7 @@ import portfolioItem from './portfolioItem'
 import blogPost from './blogPost'
 import technology from './technology'
 import client from './client'
+import embed from './embed'
 
 export const schemaTypes = [
   // Document types
@@ -18,6 +19,7 @@ export const schemaTypes = [
   technology,
   portfolioItem,
   blogPost,
+  embed,
 
   // Other types
   blockContent,
