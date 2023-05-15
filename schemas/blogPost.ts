@@ -45,6 +45,13 @@ export default defineType({
         hotspot: true,
         storeOriginalFilename: false,
       },
+      fields: [
+        {
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
+        },
+      ],
     }),
     defineField({
       name: 'excerpt',
