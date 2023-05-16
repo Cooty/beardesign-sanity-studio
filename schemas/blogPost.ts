@@ -75,4 +75,11 @@ export default defineType({
   preview: {
     select: {title: 'title', media: 'coverImage'},
   },
+  orderings: [
+    {
+      title: 'Publication date',
+      name: 'publicationDate',
+      by: [{field: 'publicationDate', direction: 'asc'}],
+    },
+  ],
 })
