@@ -1,5 +1,4 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
-import {MdFormatStrikethrough} from 'react-icons/md'
 
 /**
  * This is the schema definition for the rich text fields used for
