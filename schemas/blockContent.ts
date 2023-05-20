@@ -75,6 +75,13 @@ export default defineType({
           name: 'caption',
           title: 'Caption',
           type: 'string',
+          description: 'Caption that appears under the image',
+        }),
+        defineField({
+          name: 'alt',
+          title: 'Alternative text',
+          type: 'string',
+          description: 'This text appears as metadata for the image',
         }),
       ],
     }),
